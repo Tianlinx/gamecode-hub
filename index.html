@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameCode Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="glowing-header">
+        <h1 contenteditable="true" id="siteTitle">🎮 GameCode Hub</h1>
+        <nav>
+            <a href="#hot">热门游戏</a>
+            <a href="#codes">最新兑换码</a>
+            <button id="edit-toggle" class="edit-btn"><i class="fas fa-magic"></i> 编辑模式</button>
+        </nav>
+    </header>
+
+    <!-- 热门游戏区 -->
+    <section id="hot" class="hot-games">
+        <h2><i class="fas fa-fire"></i> 热门游戏</h2>
+        <div class="game-grid" id="gameContainer"></div>
+    </section>
+
+    <!-- 兑换码展示 -->
+    <section id="codes" class="code-wall">
+        <div class="code-grid" id="codeContainer"></div>
+    </section>
+
+    <!-- 可视化编辑器 -->
+    <div class="editor-panel">
+        <div class="editor-header">
+            <h3>🔧 实时编辑器</h3>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="editor-body">
+            <div class="form-group">
+                <label>标题颜色：<input type="color" id="titleColor"></label>
+                <label>背景颜色：<input type="color" id="bgColor"></label>
+            </div>
+            <button class="save-btn">💾 保存修改</button>
+        </div>
+    </div>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
